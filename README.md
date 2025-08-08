@@ -71,7 +71,6 @@ python test_single_xlsx.py mytest.pdf
 ## 系统要求
 
 - Python 3.7+
-- Java Runtime Environment (JRE) - PDF 转 XLSX 功能需要
 
 ## 安装依赖
 
@@ -92,15 +91,6 @@ pip install tabula-py pandas openpyxl
 ```bash
 pip install pdfplumber
 ```
-
-### Java 环境安装
-
-PDF 转 XLSX 功能需要 Java 运行环境，请从以下地址下载安装：
-
-- [Oracle Java](https://www.java.com/download/)
-- 或使用包管理器安装（如 Windows 的 Chocolatey、macOS 的 Homebrew 等）
-
-安装完成后，确保 Java 在系统 PATH 中可用。
 
 ## 文件说明
 
@@ -151,128 +141,8 @@ PDF 转 XLSX 功能需要 Java 运行环境，请从以下地址下载安装：
 - 程序会尝试多种提取策略以提高成功率
 - 如果没有找到表格，会提示相应的错误信息
 
-## 示例输出
-
-### PDF 转 DOCX 示例
-
-```
-PDF to DOCX Converter
-==================================================
-Converting PDF files in current directory to DOCX format...
-
-✅ Dependencies check passed: pdf2docx is available
-
-� PFound 3 PDF files to convert
-
-🔄 Processing (1/3 - 33%): document1.pdf
-✅ Successfully converted: document1.pdf
-🔄 Processing (2/3 - 67%): report.pdf
-✅ Successfully converted: report.pdf
-🔄 Processing (3/3 - 100%): presentation.pdf
-✅ Successfully converted: presentation.pdf
-
-==================================================
-📊 CONVERSION SUMMARY
-==================================================
-Total files processed: 3
-✅ Successfully converted: 3
-📈 Success rate: 100.0%
-==================================================
-
-🎉 Conversion process completed!
-```
-
-### PDF 转 XLSX 示例
-
-```
-PDF to XLSX Converter
-==================================================
-Converting PDF files in current directory to XLSX format...
-
-✅ Java check passed: java version "17.0.10" 2024-01-16 LTS
-✅ tabula-py is available
-✅ pandas is available
-✅ openpyxl is available
-
-✅ All dependencies are satisfied!
-
-📁 Found 2 PDF files to convert
-
-🔄 Processing (1/2 - 50%): sales_report.pdf
-🔄 Converting: sales_report.pdf → sales_report.xlsx
-🔍 Extracting tables from: sales_report.pdf
-  📋 Trying default table extraction...
-  ✅ Found table 1: 6 rows × 5 columns
-  📊 Successfully extracted 1 table(s)
-  💾 Saved XLSX file: sales_report.xlsx
-✅ Conversion successful: sales_report.xlsx
-   📊 Tables converted: 1
-   🔧 Extraction method: tabula-default
-✅ Successfully converted: sales_report.pdf
-
-🔄 Processing (2/2 - 100%): data_table.pdf
-🔄 Converting: data_table.pdf → data_table.xlsx
-🔍 Extracting tables from: data_table.pdf
-  📋 Trying default table extraction...
-  ✅ Found table 1: 10 rows × 3 columns
-  ✅ Found table 2: 8 rows × 4 columns
-  📊 Successfully extracted 2 table(s)
-  💾 Saved XLSX file: data_table.xlsx
-✅ Conversion successful: data_table.xlsx
-   📊 Tables converted: 2
-   🔧 Extraction method: tabula-default
-✅ Successfully converted: data_table.pdf
-
-==================================================
-📊 CONVERSION SUMMARY
-==================================================
-Total files processed: 2
-✅ Successfully converted: 2
-📈 Success rate: 100.0%
-==================================================
-
-🎉 Conversion process completed!
-```
-
-## 故障排除
-
-### 常见问题
-
-1. **Java 未安装或不在 PATH 中**
-
-   ```
-   ❌ Java Runtime Error: Java command not found
-   ```
-
-   解决方案：安装 Java 并确保在系统 PATH 中
-
-2. **PDF 中没有表格**
-
-   ```
-   ❌ No tables found in the PDF file
-   ```
-
-   解决方案：确认 PDF 包含表格数据，或尝试其他 PDF 文件
-
-3. **依赖库缺失**
-
-   ```
-   ❌ tabula-py is not installed
-   ```
-
-   解决方案：运行 `pip install tabula-py pandas openpyxl`
-
-4. **文件权限问题**
-   ```
-   ❌ Permission denied writing XLSX file
-   ```
-   解决方案：检查文件权限，确保 XLSX 文件未在 Excel 中打开
-
-### 获取帮助
-
-如果遇到其他问题，请：
-
 1. 检查 PDF 文件是否包含实际的表格数据
 2. 确认所有依赖都已正确安装
 3. 尝试使用不同的 PDF 文件进行测试
 4. 查看详细的错误信息以获取具体指导
+
