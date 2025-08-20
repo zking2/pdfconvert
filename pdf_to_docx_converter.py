@@ -1,3 +1,10 @@
+'''
+Description: 
+Author: dong
+Date: 2025-08-07 14:46:13
+Version: V1.0
+Company: Finedo.cn
+'''
 #!/usr/bin/env python3
 """
 PDF to DOCX Converter
